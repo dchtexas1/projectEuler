@@ -8,7 +8,7 @@
 # solves problem 1
 def problem1():
     sum1 = 0
-    for i in xrange(1000):              # looks at every number up to 1000 and
+    for i in xrange(1000):              # looks at every number up to 1000
         if (i % 3 == 0 or i % 5 == 0):  # checks if they are multiples of 3 | 5
             sum1 += i                   # to determine if they should be summed
     return sum1
@@ -20,15 +20,12 @@ def problem2():
     m = 0
     tmp = 0
     sum2 = 0
-    for x in xrange(51):
-        if (n < 4000000):               # adds two numbers together, and then
-            tmp = n                     # increments the numbers by the
-            n += m                      # fibonacci sequence and checks if they
-            m = tmp                     # are multiples of 2 (even). if they
-            if (n % 2 == 0):            # are, they will be summed together
-                sum2 += n
-        else:
-            break
+    while (n < 4000000):                # adds two numbers together, and then
+        tmp = n                         # increments the numbers by the
+        n += m                          # fibonacci sequence and checks if they
+        m = tmp                         # are multiples of 2 (even). if they
+        if (n % 2 == 0):                # are, they will be summed together
+            sum2 += n
     return sum2
 
 
